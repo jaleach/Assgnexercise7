@@ -121,5 +121,7 @@ function filterLongWords(words, i){
 // ---------------------
 
 function charFreq(string){
+    var s
+
     //...
 }
