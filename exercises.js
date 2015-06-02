@@ -4,13 +4,15 @@
 
 function max(x,y){
     if (x > y) {
-        return "x"
+        return x
     }
     else {
-        return "y"
+        return y
     }
     //...
 }
+
+//corrected
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
@@ -18,10 +20,12 @@ function max(x,y){
 
 function maxOfThree(x, y, z){
 
-    var numbers = [x, y, z]
-    var sorted = numbers.sort()
-    return sorted[2]
+    var numbers = [x, y, z];
+    var sorted = numbers.sort();
+    return sorted[2];
 }
+
+//added semi colons
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -44,18 +48,19 @@ function isVowel(char){
 function rovarspraket(phrase){
     var this = phrase.split("");
     var ttAy=[];
-    this.forEach(function(x)){
+    this.forEach(function(x){
         if (x==='a' || x==='e' || x==='i' || x==='o' || x==='u'){
             ttAy.push(x);
         }
         else {
-            ttAy.push(x+o+x);
+            ttAy.push(x+x+x);
         }
     }
-    return ttAy.join("")
+    return ttAy.join('');
 
 }
 
+// updated
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies
 // (respectively) all the numbers in an array of numbers.
@@ -66,17 +71,19 @@ function sum(thesum){
     var number = thesum.reduce(function(a,b){
         return a + b;
 
-})
-return number}
+});
+return number;
+}
 //
 function multiply(mult){
 var number = mult.reduce(function(a,b){
         return a * b;
 
-})
-return number}
+});
+return number;
+}
 
-
+//updated
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example,
 //reverse("jag testar") should return the string "ratset gaj".
@@ -106,13 +113,14 @@ function findLongestWord(words){
 //returns the array of words that are longer than i.
 // ---------------------
 
-function filterLongWords(words, i){
-  var lWord = [];
-    words.forEach(function(longw) {
-        if (longw.length > i){
-        lWord.push(word);}
-    });
-    return lWord;
+
+function findLongestWord(words){
+    var long=words.sort(function(a,b)
+     {
+        return b.length;
+     });
+    return long;
+
 }
 
 
@@ -121,7 +129,16 @@ function filterLongWords(words, i){
 // ---------------------
 
 function charFreq(string){
-    var s
+    var chars=string.split('');
+    var charList= {};
+    char.forEach(function(char){
 
-    //...
+    if (charList[char])===undefined) {
+      charlist[char] = 1;
+  } else {
+    charList[char] = charList[char] + 1;
+}
+    });
+    return charlist;
+    //... From class 5/18
 }
